@@ -23,13 +23,9 @@
                   <span class="text-muted">Name:</span> <%= @user.name%><br>
                   <span class="text-muted">Id:</span> <%= @user.id %><br>
                 </div>
-                <div class="col-md-6">
-                  <div class="activity-mini">
-                    <i class="glyphicon glyphicon-comment text-muted"></i> 500
-                  </div>
-                  <div class="activity-mini">
-                    <i class="glyphicon glyphicon-thumbs-up text-muted"></i> 1500
-                  </div>
+                <div class="col-md-10">
+                  <h3>User's To-Do List</h3>
+                  <%= render partial: 'items/item'%>
                 </div>
               </div>
             </div>

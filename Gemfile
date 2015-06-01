@@ -11,6 +11,7 @@ group :production do
 
  group :development do
    gem 'sqlite3'
+   gem "better_errors"
  end
 
 # Use SCSS for stylesheets
