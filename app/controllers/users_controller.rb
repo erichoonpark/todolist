@@ -1,8 +1,14 @@
 class UsersController < ApplicationController
   def show
-    @user = User.find(params[:id])
-    @item = @user.items
+    if params[:id].present?
+      @user = User.find(params[:id])
+      @item = current_user.items
+    else
+      @user = current_user
+      @item = current_user.items
+    end
   end
+
 
   private
    def user_params

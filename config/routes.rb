@@ -5,5 +5,12 @@ Rails.application.routes.draw do
   end
 
   get 'welcome/index'
-  root :to => 'welcome#index'
+
+  # Authenticated Users:
+    authenticated :user do
+      root to: 'users#show', as: :authenticated_root
+    end
+
+    # Non-Authenticated Users
+    root to: 'welcome#index'
 end
