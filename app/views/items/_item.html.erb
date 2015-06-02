@@ -1,4 +1,6 @@
 <% @item.each do |item| %>
+  <%= link_to "", [item.user, item], method: :delete, remote: true, class: 'glyphicon glyphicon-ok' %>
   <%= item.name %>
+  <%= item.days_left %>
   <br>
 <% end %>

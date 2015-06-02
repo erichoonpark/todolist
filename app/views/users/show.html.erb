@@ -14,18 +14,10 @@
             </div>
             <div class="col-md-8">
               <div class="row">
-                <div class="col-md-12">
-                  <h1 class="only-bottom-margin"><%= @user.email%></h1>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6">
-                  <span class="text-muted">Name:</span> <%= @user.name%><br>
-                  <span class="text-muted">Id:</span> <%= @user.id %><br>
-                </div>
                 <div class="col-md-10">
-                  <h3>User's To-Do List</h3>
-                  <%= render partial: 'items/item'%>
+                  <h3><%= @user.name%> To-Do List</h3>
+                      <%= render partial: 'items/item'%>
+                      <br>
                 </div>
               </div>
             </div>
