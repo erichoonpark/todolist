@@ -9,10 +9,14 @@ group :production do
    gem 'rails_12factor'
  end
 
- group :development do
+group :development do
    gem 'sqlite3'
    gem "better_errors"
- end
+end
+
+group :development, :test do
+  gem 'rspec-rails','~>3.0'
+end
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -37,6 +41,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 # Figaro for private variables
 gem 'figaro', '1.0'
+
+#Seeding database
+gem 'faker'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

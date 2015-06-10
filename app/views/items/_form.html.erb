@@ -1,8 +1,9 @@
-<%= form_for [@user, @item] do |f| %>
-   <%= f.label :name %>
-   <%= f.text_field :name %>
 
-   <% @item.user_id = @user.id %>
+<div id>
+<%= form_for [@user, @item], remote: true do |f| %>
+   <br>
+   <%= f.label :Task %>
+   <%= f.text_field :name %>
 
    <%= f.submit "Save" %>
 <% end %>
