@@ -1,3 +1,4 @@
+
 <%-if item.persisted? %>
     <div id="item-<%=item.id%>" class="tasks">
       <%= link_to "", [item.user, item], method: :delete, remote: true, class: 'glyphicon glyphicon-ok' %>
