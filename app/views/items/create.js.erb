@@ -1,5 +1,1 @@
-<% if @item.valid? %>
-   $('#item-' +<%= @item.id %>);
-<% else %>
-   $('#item-' +<%= @item.id %>).prepend("<div class='alert alert-danger'><%= flash[:error] %></div>");
-<% end %>
+$("<%= escape_javascript(render(:partial => 'items/item', locals: {item: @item} )) %>").appendTo('#item_list').hide().show('fast')
